@@ -1,50 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prashant's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motodeal - Ultimate Motorcycle Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiNFRjQ0NDQiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CjxwYXRoIGQ9Ik0xMiAyTDEzLjA5IDguMjZMMjAgOUwxNC43NyAxMi43NEwxNiAyMEwxMiAxN0w4IDIwTDkuMjMgMTIuNzRMNCA5TDEwLjkxIDguMjZMMTIgMloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo8L3N2Zz4K" alt="Motodeal">
+                <span>Motodeal</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#pages" class="nav-link">PAGES</a>
+                <a href="#shop" class="nav-link">SHOP</a>
+                <a href="#news" class="nav-link">NEWS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn">🛒</button>
+                <button class="cta-btn">GET QUOTE</button>
+            </div>
+        </div>
+    </header>
 
-  <!-- 👋 Home Section -->
-  <section id="home">
-    <h1>Hi, I'm Prashant</h1>
-    <p>Web Developer | Learner | Creator</p>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">CBR</div>
+                    <div class="hero-subtitle">THE RACING HORSE BACK</div>
+                    <h1 class="hero-title">Ultimate Horse on track<br><span class="brand-name">Honda CBR</span></h1>
+                    <button class="hero-cta">VIEW DETAILS</button>
+                </div>
+                <div class="hero-image">
+                    <div class="motorcycle-placeholder">
+                        <div class="bike-silhouette">🏍️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 👨‍💼 About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I love building websites and learning new things every day.</p>
-  </section>
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-form">
+                <select class="search-select">
+                    <option>Select Bike Brand</option>
+                    <option>Honda</option>
+                    <option>Yamaha</option>
+                    <option>Suzuki</option>
+                    <option>Kawasaki</option>
+                </select>
+                <select class="search-select">
+                    <option>Select Model</option>
+                    <option>CBR 1000</option>
+                    <option>R1</option>
+                    <option>GSX-R</option>
+                </select>
+                <select class="search-select">
+                    <option>Price Range</option>
+                    <option>Under $10,000</option>
+                    <option>$10,000 - $20,000</option>
+                    <option>Above $20,000</option>
+                </select>
+                <button class="search-btn-main">SEARCH BIKE</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- 💻 Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+    <!-- Browse by Brand -->
+    <section class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Browse by Brand</h2>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>SUZUKI</span>
+                    <small>299 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>HERO</span>
+                    <small>152 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>HARLEY DAVIDSON</span>
+                    <small>89 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>DUCATI</span>
+                    <small>67 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>YAMAHA</span>
+                    <small>234 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>ROYAL ENFIELD</span>
+                    <small>156 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>HONDA</span>
+                    <small>445 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>APRILIA</span>
+                    <small>78 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>TRIUMPH</span>
+                    <small>123 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>KAWASAKI</span>
+                    <small>189 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>TVS</span>
+                    <small>267 BIKES</small>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">🏍️</div>
+                    <span>BAJAJ</span>
+                    <small>334 BIKES</small>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 📩 Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- Featured Bikes -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-header">
+                <span class="section-subtitle">FEATURED</span>
+                <h2 class="section-title">Featured Bikes</h2>
+            </div>
+            <div class="featured-bike">
+                <div class="bike-image">
+                    <div class="bike-placeholder">🏍️</div>
+                </div>
+                <div class="bike-info">
+                    <h3>750 ADVENTURE 2019</h3>
+                    <h4>$18,999.00</h4>
+                    <button class="view-details">VIEW DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 📄 Footer -->
-  <footer>
-    <p>© 2025 Prashant Singh | All rights reserved</p>
-  </footer>
+    <!-- Promotional Section -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-image">
+                    <div class="bike-placeholder">🏍️</div>
+                </div>
+                <div class="promo-text">
+                    <h2>Go as Curiosity takes you</h2>
+                    <p>Take motorcycles to the peak of their artisan transcendence needs to flourish in the best service of accelerated.</p>
+                    <button class="promo-cta">CONTACT US</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Browse by Type -->
+    <section class="types-section">
+        <div class="container">
+            <div class="types-header">
+                <span class="section-subtitle">ALL TYPE</span>
+                <h2 class="section-title">Browse by Type</h2>
+            </div>
+            <div class="type-filters">
+                <button class="filter-btn active">ALL BIKES</button>
+                <button class="filter-btn">ROADSTER</button>
+                <button class="filter-btn">TOURING</button>
+                <button class="filter-btn">OFF ROAD</button>
+                <button class="filter-btn">CRUISER</button>
+            </div>
+            <div class="bikes-grid">
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>FSR 950CC Double Disk</h3>
+                    <p class="price">$15,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Honda Civic</h3>
+                    <p class="price">$18,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Mercedes Benz</h3>
+                    <p class="price">$19,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>BMW 750 Series</h3>
+                    <p class="price">$21,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Honda Civic</h3>
+                    <p class="price">$23,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Mercedes Benz</h3>
+                    <p class="price">$24,999.00</p>
+                </div>
+            </div>
+            <button class="view-collection">VIEW COLLECTION</button>
+        </div>
+    </section>
+
+    <!-- Best Mileage -->
+    <section class="mileage-section">
+        <div class="container">
+            <div class="mileage-header">
+                <span class="section-subtitle">FEATURE CATEGORY</span>
+                <h2 class="section-title">Best Mileage Bikes</h2>
+            </div>
+            <div class="mileage-grid">
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>BMW 750 Series</h3>
+                    <p class="price">$19,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Honda Civic</h3>
+                    <p class="price">$19,999.00</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-image">🏍️</div>
+                    <h3>Mercedes Benz</h3>
+                    <p class="price">$19,999.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Motodeal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
