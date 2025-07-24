@@ -1,0 +1,1055 @@
+/* Medicines Page Specific Styles */
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 15px 0;
+    margin-top: 80px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.breadcrumb-nav a {
+    color: #0073e6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: #005bb5;
+}
+
+.breadcrumb-separator {
+    color: #6c757d;
+}
+
+.breadcrumb-current {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #0073e6 0%, #28a745 100%);
+    color: white;
+    padding: 40px 0;
+}
+
+.page-header-content {
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.page-header h1 i {
+    font-size: 40px;
+}
+
+.page-header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Main Layout */
+.medicines-main {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+
+.medicines-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+}
+
+/* Sidebar Styles */
+.medicines-sidebar {
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-section {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.sidebar-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-section h3 i {
+    color: #0073e6;
+}
+
+.sidebar-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.clear-filters {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.clear-filters:hover {
+    background: #c82333;
+}
+
+/* Search Filter */
+.search-filter {
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-filter input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-filter button {
+    background: #0073e6;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-filter button:hover {
+    background: #005bb5;
+}
+
+/* Filter Checkboxes */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.filter-checkbox:hover {
+    color: #0073e6;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .checkmark {
+    background: #0073e6;
+    border-color: #0073e6;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Price Range Filter */
+.price-range {
+    margin-bottom: 15px;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.price-inputs input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.price-inputs input:focus {
+    border-color: #0073e6;
+}
+
+.price-inputs span {
+    color: #666;
+    font-weight: 500;
+}
+
+.apply-price-filter {
+    width: 100%;
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.apply-price-filter:hover {
+    background: #005bb5;
+}
+
+.price-presets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.price-preset {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.price-preset:hover {
+    background: #0073e6;
+    color: white;
+    border-color: #0073e6;
+}
+
+/* Products Content */
+.medicines-content {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Products Toolbar */
+.products-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.products-count {
+    font-weight: 600;
+    color: #333;
+}
+
+.toolbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sort-options select:focus {
+    border-color: #0073e6;
+}
+
+.view-options {
+    display: flex;
+    gap: 5px;
+}
+
+.view-btn {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.view-btn:hover,
+.view-btn.active {
+    background: #0073e6;
+    color: white;
+    border-color: #0073e6;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.products-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.products-grid.list-view .product-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.products-grid.list-view .product-image {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.products-grid.list-view .product-info {
+    flex: 1;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #0073e6;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+}
+
+.product-badges span {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-discount {
+    background: #dc3545;
+    color: white;
+}
+
+.badge-prescription {
+    background: #ffc107;
+    color: #333;
+}
+
+.badge-popular {
+    background: #28a745;
+    color: white;
+}
+
+.badge-ayurvedic {
+    background: #6f42c1;
+    color: white;
+}
+
+.product-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.quick-view-btn,
+.wishlist-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.quick-view-btn:hover,
+.wishlist-btn:hover {
+    background: #0073e6;
+    color: white;
+    transform: scale(1.1);
+}
+
+.wishlist-btn.active {
+    background: #dc3545;
+    color: white;
+}
+
+.wishlist-btn.active i {
+    font-weight: 900;
+}
+
+/* Product Info */
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.product-brand {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.product-description {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.stars i {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.rating-count {
+    color: #666;
+    font-size: 12px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #28a745;
+}
+
+.original-price {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount-percent {
+    background: #dc3545;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.product-availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.product-availability i {
+    color: #28a745;
+}
+
+.product-availability span {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cart,
+.btn-buy-now {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-cart {
+    background: #28a745;
+    color: white;
+}
+
+.btn-cart:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-buy-now {
+    background: #0073e6;
+    color: white;
+}
+
+.btn-buy-now:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.pagination-btn {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #0073e6;
+    color: white;
+    border-color: #0073e6;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-number {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-number:hover,
+.pagination-number.active {
+    background: #0073e6;
+    color: white;
+    border-color: #0073e6;
+}
+
+.pagination-dots {
+    color: #666;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* Quick View Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f8f9fa;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.quick-view-content {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.quick-view-image {
+    flex: 1;
+}
+
+.quick-view-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.quick-view-info {
+    flex: 1;
+}
+
+.quick-view-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.quick-view-brand {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.quick-view-rating {
+    margin-bottom: 15px;
+}
+
+.quick-view-description {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.quick-view-price {
+    margin-bottom: 20px;
+}
+
+.quick-view-availability {
+    margin-bottom: 25px;
+}
+
+.quick-view-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.quick-view-actions .btn-cart,
+.quick-view-actions .btn-buy-now {
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+/* Active Navigation Link */
+.nav-menu a.active {
+    color: #0073e6;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #0073e6;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .medicines-layout {
+        grid-template-columns: 250px 1fr;
+        gap: 30px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .medicines-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .medicines-sidebar {
+        position: static;
+        order: 2;
+    }
+    
+    .medicines-content {
+        order: 1;
+    }
+    
+    .products-toolbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .toolbar-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sort-options,
+    .view-options {
+        justify-content: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .quick-view-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .pagination-numbers {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 30px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 24px;
+    }
+    
+    .page-header p {
+        font-size: 16px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .product-buttons {
+        flex-direction: column;
+    }
+    
+    .sidebar-section {
+        padding: 15px;
+    }
+    
+    .medicines-sidebar {
+        border-radius: 8px;
+    }
+    
+    .medicines-content {
+        border-radius: 8px;
+    }
+    
+    .quick-view-content {
+        padding: 15px;
+    }
+    
+    .quick-view-actions {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        margin: 10px;
+        border-radius: 10px;
+    }
+}
+
+/* Loading States */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.product-card.loading .product-image img,
+.product-card.loading .product-name,
+.product-card.loading .product-brand,
+.product-card.loading .product-description {
+    background: #f0f0f0;
+    color: transparent;
+    border-radius: 4px;
+}
+
+/* Filter Animation */
+.filter-group {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.filter-group::-webkit-scrollbar {
+    width: 4px;
+}
+
+.filter-group::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.filter-group::-webkit-scrollbar-thumb {
+    background: #0073e6;
+    border-radius: 2px;
+}
+
+.filter-group::-webkit-scrollbar-thumb:hover {
+    background: #005bb5;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-state i {
+    font-size: 64px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.empty-state button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.empty-state button:hover {
+    background: #005bb5;
+}
