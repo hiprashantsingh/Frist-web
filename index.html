@@ -1,50 +1,580 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prashant's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेडिकल शॉप - आपकी सेहत, हमारी प्राथमिकता</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/150x60/0073e6/ffffff?text=Medical+Shop" alt="Medical Shop Logo">
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="#home">होम</a></li>
+                        <li><a href="#medicines">दवाइयाँ</a></li>
+                        <li><a href="#health-products">स्वास्थ्य उत्पाद</a></li>
+                        <li><a href="#ayurveda">आयुर्वेद</a></li>
+                        <li><a href="#offers">ऑफ़र्स</a></li>
+                        <li><a href="#blog">ब्लॉग</a></li>
+                        <li><a href="#about">हमारे बारे में</a></li>
+                        <li><a href="#contact">संपर्क करें</a></li>
+                    </ul>
+                </nav>
 
-  <!-- 👋 Home Section -->
-  <section id="home">
-    <h1>Hi, I'm Prashant</h1>
-    <p>Web Developer | Learner | Creator</p>
-  </section>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="दवा या ब्रांड खोजें...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <a href="tel:+911234567890" class="phone-btn">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 1234 567 890</span>
+                        </a>
+                        <button class="login-btn">
+                            <i class="fas fa-user"></i>
+                            <span>लॉगिन</span>
+                        </button>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
 
-  <!-- 👨‍💼 About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I love building websites and learning new things every day.</p>
-  </section>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <!-- 💻 Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>आपकी सेहत, हमारी प्राथमिकता</h1>
+                            <p>घर बैठे मंगाएँ असली दवाएँ</p>
+                            <div class="hero-buttons">
+                                <button class="btn-primary">अभी दवा ऑर्डर करें</button>
+                                <button class="btn-secondary">सभी ऑफ़र्स देखें</button>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://via.placeholder.com/600x400/28a745/ffffff?text=Happy+Family" alt="खुशहाल परिवार">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="usp-section">
+            <div class="container">
+                <div class="usp-items">
+                    <div class="usp-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24x7 उपलब्धता</span>
+                    </div>
+                    <div class="usp-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% जेन्युइन मेडिसिन</span>
+                    </div>
+                    <div class="usp-item">
+                        <i class="fas fa-truck"></i>
+                        <span>फ्री होम डिलीवरी</span>
+                    </div>
+                    <div class="usp-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>डॉक्टर प्रिस्क्रिप्शन सपोर्ट</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 📩 Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- Search & Categories -->
+    <section class="search-categories">
+        <div class="container">
+            <div class="search-bar-main">
+                <input type="text" placeholder="दवा या ब्रांड खोजें...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            
+            <h2>लोकप्रिय श्रेणियाँ</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <i class="fas fa-pills"></i>
+                    <span>सभी दवाएँ</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>मधुमेह</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <span>दर्द निवारक</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-heart"></i>
+                    <span>हृदय रोग</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-virus"></i>
+                    <span>एंटीबायोटिक्स</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-leaf"></i>
+                    <span>विटामिन्स</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-spa"></i>
+                    <span>त्वचा देखभाल</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-baby"></i>
+                    <span>बच्चों की देखभाल</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-seedling"></i>
+                    <span>आयुर्वेदिक</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>मेडिकल उपकरण</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 📄 Footer -->
-  <footer>
-    <p>© 2025 Prashant Singh | All rights reserved</p>
-  </footer>
+    <!-- Special Offers -->
+    <section class="special-offers" id="offers">
+        <div class="container">
+            <h2>आज के जबरदस्त ऑफ़र्स</h2>
+            <div class="offers-slider">
+                <div class="offer-card">
+                    <div class="discount-tag">15% छूट</div>
+                    <img src="https://via.placeholder.com/200x150/0073e6/ffffff?text=Medicine" alt="दवा">
+                    <h3>पैरासिटामोल 500mg</h3>
+                    <p class="brand">सिप्ला</p>
+                    <div class="price">
+                        <span class="original">₹50</span>
+                        <span class="discounted">₹42.50</span>
+                    </div>
+                    <button class="btn-primary">अभी खरीदें</button>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="discount-tag">Buy 1 Get 1 Free</div>
+                    <img src="https://via.placeholder.com/200x150/28a745/ffffff?text=Vitamin" alt="विटामिन">
+                    <h3>मल्टी विटामिन टैबलेट</h3>
+                    <p class="brand">न्यूट्रिलाइट</p>
+                    <div class="price">
+                        <span class="original">₹299</span>
+                        <span class="discounted">₹299</span>
+                    </div>
+                    <button class="btn-primary">अभी खरीदें</button>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="discount-tag">20% छूट</div>
+                    <img src="https://via.placeholder.com/200x150/dc3545/ffffff?text=Ayurvedic" alt="आयुर्वेदिक">
+                    <h3>च्यवनप्राश</h3>
+                    <p class="brand">डाबर</p>
+                    <div class="price">
+                        <span class="original">₹250</span>
+                        <span class="discounted">₹200</span>
+                    </div>
+                    <button class="btn-primary">अभी खरीदें</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Bestsellers -->
+    <section class="bestsellers">
+        <div class="container">
+            <h2>सबसे ज्यादा बिकने वाली दवाएँ</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/0073e6/ffffff?text=Medicine" alt="दवा">
+                    <h3>एस्पिरिन 75mg</h3>
+                    <p class="brand">बायर</p>
+                    <p class="description">हृदय रोग की रोकथाम के लिए</p>
+                    <div class="price">₹45</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/28a745/ffffff?text=Medicine" alt="दवा">
+                    <h3>मेटफॉर्मिन 500mg</h3>
+                    <p class="brand">सन फार्मा</p>
+                    <p class="description">मधुमेह नियंत्रण के लिए</p>
+                    <div class="price">₹85</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/dc3545/ffffff?text=Medicine" alt="दवा">
+                    <h3>ओमेप्राजोल 20mg</h3>
+                    <p class="brand">डॉ. रेड्डीज</p>
+                    <p class="description">एसिडिटी की समस्या के लिए</p>
+                    <div class="price">₹65</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/ffc107/000000?text=Medicine" alt="दवा">
+                    <h3>सेटिरिजिन 10mg</h3>
+                    <p class="brand">ग्लैक्सो</p>
+                    <p class="description">एलर्जी की दवा</p>
+                    <div class="price">₹35</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="new-arrivals">
+        <div class="container">
+            <h2>नई आई दवाएँ</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="new-tag">नई</div>
+                    <img src="https://via.placeholder.com/250x200/17a2b8/ffffff?text=New+Medicine" alt="नई दवा">
+                    <h3>विटामिन डी3 60K</h3>
+                    <p class="brand">अल्केम</p>
+                    <p class="description">विटामिन डी की कमी के लिए</p>
+                    <div class="price">₹125</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="new-tag">नई</div>
+                    <img src="https://via.placeholder.com/250x200/6f42c1/ffffff?text=New+Medicine" alt="नई दवा">
+                    <h3>प्रोबायोटिक कैप्सूल</h3>
+                    <p class="brand">बायोकॉन</p>
+                    <p class="description">पाचन स्वास्थ्य के लिए</p>
+                    <div class="price">₹180</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="new-tag">नई</div>
+                    <img src="https://via.placeholder.com/250x200/fd7e14/ffffff?text=New+Medicine" alt="नई दवा">
+                    <h3>कैल्शियम + मैग्नीशियम</h3>
+                    <p class="brand">कार्बोहाइड्रेट</p>
+                    <p class="description">हड्डियों की मजबूती के लिए</p>
+                    <div class="price">₹95</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="new-tag">नई</div>
+                    <img src="https://via.placeholder.com/250x200/e83e8c/ffffff?text=New+Medicine" alt="नई दवा">
+                    <h3>ओमेगा-3 कैप्सूल</h3>
+                    <p class="brand">न्यूट्रिलाइट</p>
+                    <p class="description">हृदय और मस्तिष्क स्वास्थ्य के लिए</p>
+                    <div class="price">₹299</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ayurvedic Section -->
+    <section class="ayurvedic-section" id="ayurveda">
+        <div class="container">
+            <h2>शुद्ध आयुर्वेदिक उपचार</h2>
+            <div class="ayurvedic-grid">
+                <div class="ayurvedic-card">
+                    <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Chyawanprash" alt="च्यवनप्राश">
+                    <h3>च्यवनप्राश</h3>
+                    <p>प्रतिरक्षा प्रणाली मजबूत बनाने के लिए</p>
+                    <div class="price">₹250</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="ayurvedic-card">
+                    <img src="https://via.placeholder.com/300x200/ffc107/000000?text=Triphala" alt="त्रिफला">
+                    <h3>त्रिफला चूर्ण</h3>
+                    <p>पाचन संस्थान की सफाई के लिए</p>
+                    <div class="price">₹120</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="ayurvedic-card">
+                    <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=Ashwagandha" alt="अश्वगंधा">
+                    <h3>अश्वगंधा कैप्सूल</h3>
+                    <p>तनाव और कमजोरी दूर करने के लिए</p>
+                    <div class="price">₹180</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+                
+                <div class="ayurvedic-card">
+                    <img src="https://via.placeholder.com/300x200/17a2b8/ffffff?text=Giloy" alt="गिलोय">
+                    <h3>गिलोय टैबलेट</h3>
+                    <p>बुखार और संक्रमण से बचाव के लिए</p>
+                    <div class="price">₹95</div>
+                    <button class="btn-cart">कार्ट में जोड़ें</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>क्यों हमें चुनें?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>100% जेन्युइन मेडिसिन</h3>
+                    <p>लाइसेंस नंबर: DL-12345678</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-user-md"></i>
+                    <h3>अनुभवी फार्मासिस्ट सलाह</h3>
+                    <p>15+ साल का अनुभव</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>तेज़ & सुरक्षित डिलीवरी</h3>
+                    <p>पिनकोड चेकर उपलब्ध</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>गोपनीयता सुनिश्चित</h3>
+                    <p>आपकी जानकारी सुरक्षित</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-upload"></i>
+                    <h3>प्रिस्क्रिप्शन अपलोड सुविधा</h3>
+                    <p>आसान ऑर्डर प्रक्रिया</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>ग्राहक समीक्षाएँ</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"बहुत अच्छी सेवा मिली। दवाएँ जल्दी पहुंच गईं और बिल्कुल असली थीं।"</p>
+                    <div class="customer-info">
+                        <img src="https://via.placeholder.com/60x60/0073e6/ffffff?text=R" alt="राहुल">
+                        <div>
+                            <h4>राहुल शर्मा</h4>
+                            <span>दिल्ली</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"24 घंटे सेवा उपलब्ध है। रात में भी दवा मंगवा सकते हैं।"</p>
+                    <div class="customer-info">
+                        <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=P" alt="प्रिया">
+                        <div>
+                            <h4>प्रिया गुप्ता</h4>
+                            <span>मुंबई</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"कीमतें बहुत अच्छी हैं और छूट भी मिलती रहती है।"</p>
+                    <div class="customer-info">
+                        <img src="https://via.placeholder.com/60x60/dc3545/ffffff?text=A" alt="अमित">
+                        <div>
+                            <h4>अमित कुमार</h4>
+                            <span>बैंगलोर</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Blog -->
+    <section class="health-blog" id="blog">
+        <div class="container">
+            <h2>स्वास्थ्य ज्ञान</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300x200/0073e6/ffffff?text=Health+Tips" alt="स्वास्थ्य टिप्स">
+                    <h3>सर्दी-जुकाम से बचने के उपाय</h3>
+                    <p>मौसम बदलने पर कैसे रखें अपना ख्याल...</p>
+                    <a href="#" class="read-more">पढ़ें</a>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Nutrition" alt="पोषण">
+                    <h3>संतुलित आहार का महत्व</h3>
+                    <p>स्वस्थ रहने के लिए क्या खाना चाहिए...</p>
+                    <a href="#" class="read-more">पढ़ें</a>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=Medicine+Info" alt="दवा जानकारी">
+                    <h3>दवाओं का सही उपयोग</h3>
+                    <p>दवा लेते समय इन बातों का रखें ध्यान...</p>
+                    <a href="#" class="read-more">पढ़ें</a>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300x200/ffc107/000000?text=Exercise" alt="व्यायाम">
+                    <h3>घर पर करें ये आसान व्यायाम</h3>
+                    <p>बिना जिम जाए फिट रहने के तरीके...</p>
+                    <a href="#" class="read-more">पढ़ें</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download App -->
+    <section class="download-app">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>एक्सक्लूसिव ऐप ऑफ़र्स!</h2>
+                    <p>हमारा मोबाइल ऐप डाउनलोड करें और पाएं विशेष छूट</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-store-btn">
+                            <img src="https://via.placeholder.com/150x50/000000/ffffff?text=App+Store" alt="App Store">
+                        </a>
+                        <a href="#" class="play-store-btn">
+                            <img src="https://via.placeholder.com/150x50/01875f/ffffff?text=Play+Store" alt="Play Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-image">
+                    <img src="https://via.placeholder.com/300x600/0073e6/ffffff?text=Mobile+App" alt="Mobile App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-cta">
+            <div class="container">
+                <h3>किसी दवा की जानकारी चाहिए? अभी कॉल करें: <a href="tel:+911234567890">+91 1234 567 890</a></h3>
+            </div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h4>ग्राहक सहायता</h4>
+                        <ul>
+                            <li><a href="#">ऑर्डर ट्रैकिंग</a></li>
+                            <li><a href="#">रिटर्न पॉलिसी</a></li>
+                            <li><a href="#">शिपिंग</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>पॉपुलर कैटेगरीज़</h4>
+                        <ul>
+                            <li><a href="#">दवाइयाँ</a></li>
+                            <li><a href="#">विटामिन्स</a></li>
+                            <li><a href="#">आयुर्वेदिक</a></li>
+                            <li><a href="#">मेडिकल उपकरण</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>कानूनी</h4>
+                        <ul>
+                            <li><a href="#">गोपनीयता नीति</a></li>
+                            <li><a href="#">शर्तें व नियम</a></li>
+                            <li><a href="#">डिस्क्लेमर</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>संपर्क जानकारी</h4>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 123 मेडिकल स्ट्रीट, नई दिल्ली - 110001</p>
+                            <p><i class="fas fa-phone"></i> +91 1234 567 890</p>
+                            <p><i class="fas fa-phone"></i> +91 9876 543 210</p>
+                            <p><i class="fas fa-envelope"></i> contact@medicalshop.com</p>
+                            <p><i class="fas fa-clock"></i> सुबह 8:00 - रात 10:00</p>
+                        </div>
+                        
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h4>भुगतान के तरीके</h4>
+                    <div class="payment-icons">
+                        <img src="https://via.placeholder.com/50x30/1a1f71/ffffff?text=Visa" alt="Visa">
+                        <img src="https://via.placeholder.com/50x30/eb001b/ffffff?text=MC" alt="Mastercard">
+                        <img src="https://via.placeholder.com/50x30/ff6600/ffffff?text=UPI" alt="UPI">
+                        <img src="https://via.placeholder.com/50x30/0066cc/ffffff?text=Net" alt="Netbanking">
+                        <img src="https://via.placeholder.com/50x30/28a745/ffffff?text=COD" alt="Cash on Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 मेडिकल शॉप. सर्वाधिकार सुरक्षित।</p>
+                    <p class="disclaimer">अस्वीकरण: डॉक्टर के पर्चे के बिना दवाएँ न बेचें। यह वेबसाइट सिर्फ जानकारी के लिए है।</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
