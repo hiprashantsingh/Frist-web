@@ -1,50 +1,543 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prashant's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - प्रीमियम कपड़ों की दुकान</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> +91 98765 43210</span>
+                    <span><i class="fas fa-envelope"></i> info@stylehub.com</span>
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2><i class="fas fa-tshirt"></i> StyleHub</h2>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">होम</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">कैटेगरी <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#men">मेन्स</a>
+                                <a href="#women">वीमेन्स</a>
+                                <a href="#kids">किड्स</a>
+                                <a href="#accessories">एक्सेसरीज</a>
+                            </div>
+                        </li>
+                        <li><a href="#about" class="nav-link">हमारे बारे में</a></li>
+                        <li><a href="#contact" class="nav-link">संपर्क</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="खोजें...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- 👋 Home Section -->
-  <section id="home">
-    <h1>Hi, I'm Prashant</h1>
-    <p>Web Developer | Learner | Creator</p>
-  </section>
+    <!-- Flash Sale Bar -->
+    <div class="flash-sale-bar">
+        <div class="container">
+            <marquee>🔥 फ्लैश सेल: अभी 3 शर्ट्स ₹999 में! | फ्री डिलीवरी ₹500+ ऑर्डर पर | 24 घंटे में समाप्त!</marquee>
+        </div>
+    </div>
 
-  <!-- 👨‍💼 About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I love building websites and learning new things every day.</p>
-  </section>
+    <!-- Hero Banner -->
+    <section id="home" class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>सर्दियों का नया कलेक्शन</h1>
+                    <p>प्रीमियम क्वालिटी के साथ स्टाइलिश कपड़े</p>
+                    <button class="cta-btn">अभी शॉप करें</button>
+                </div>
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop" alt="Winter Collection">
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>50% तक की छूट</h1>
+                    <p>सभी ब्रांडेड कपड़ों पर महा छूट</p>
+                    <button class="cta-btn">ऑफर देखें</button>
+                </div>
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop" alt="Sale Offer">
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>फ्री डिलीवरी</h1>
+                    <p>₹500+ के ऑर्डर पर फ्री होम डिलीवरी</p>
+                    <button class="cta-btn">अभी ऑर्डर करें</button>
+                </div>
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&h=600&fit=crop" alt="Free Delivery">
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
 
-  <!-- 💻 Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+    <!-- Categories Grid -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">श्रेणियां</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=300&h=300&fit=crop" alt="Men's Collection">
+                        <div class="category-overlay">
+                            <h3>मेन्स कलेक्शन</h3>
+                            <p>शर्ट्स, जींस, टी-शर्ट</p>
+                            <button class="category-btn">देखें</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=300&fit=crop" alt="Women's Collection">
+                        <div class="category-overlay">
+                            <h3>वीमेन्स कलेक्शन</h3>
+                            <p>सूट्स, कुर्तियां, जींस</p>
+                            <button class="category-btn">देखें</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=300&h=300&fit=crop" alt="Kids Collection">
+                        <div class="category-overlay">
+                            <h3>किड्स कलेक्शन</h3>
+                            <p>बेबी कपड़े, खिलौने</p>
+                            <button class="category-btn">देखें</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card sale-category">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=300&h=300&fit=crop" alt="Sale Collection">
+                        <div class="category-overlay">
+                            <h3>सेल कलेक्शन</h3>
+                            <p>50% तक की छूट</p>
+                            <button class="category-btn">देखें</button>
+                        </div>
+                    </div>
+                    <div class="sale-badge">SALE</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 📩 Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">ट्रेंडिंग प्रोडक्ट्स</h2>
+            <div class="products-carousel">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=400&fit=crop" alt="Cotton Shirt">
+                        <div class="product-badges">
+                            <span class="badge hot">HOT</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>कॉटन कैजुअल शर्ट</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹899</span>
+                            <span class="original-price">₹1299</span>
+                        </div>
+                        <button class="add-to-cart-btn">कार्ट में डालें</button>
+                    </div>
+                </div>
 
-  <!-- 📄 Footer -->
-  <footer>
-    <p>© 2025 Prashant Singh | All rights reserved</p>
-  </footer>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=400&fit=crop" alt="Denim Jeans">
+                        <div class="product-badges">
+                            <span class="badge new">NEW</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>डेनिम जींस</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹1299</span>
+                            <span class="original-price">₹1799</span>
+                        </div>
+                        <button class="add-to-cart-btn">कार्ट में डालें</button>
+                    </div>
+                </div>
 
-  <script src="script.js"></script>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=300&h=400&fit=crop" alt="Designer Kurti">
+                        <div class="product-badges">
+                            <span class="badge bestseller">BESTSELLER</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>डिजाइनर कुर्ती</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹799</span>
+                            <span class="original-price">₹1199</span>
+                        </div>
+                        <button class="add-to-cart-btn">कार्ट में डालें</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f37f8302?w=300&h=400&fit=crop" alt="Kids Wear">
+                        <div class="product-badges">
+                            <span class="badge new">NEW</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>किड्स ड्रेस</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹599</span>
+                            <span class="original-price">₹899</span>
+                        </div>
+                        <button class="add-to-cart-btn">कार्ट में डालें</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <button class="btn-primary">सभी प्रोडक्ट्स देखें</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title">क्विक लिंक्स</h2>
+            <div class="quick-links-grid">
+                <div class="quick-link-card">
+                    <i class="fas fa-star"></i>
+                    <h3>नया आया</h3>
+                    <p>लेटेस्ट कलेक्शन</p>
+                </div>
+                <div class="quick-link-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>बेस्टसेलर</h3>
+                    <p>टॉप पिक्स</p>
+                </div>
+                <div class="quick-link-card">
+                    <i class="fas fa-tag"></i>
+                    <h3>अंडर ₹500</h3>
+                    <p>बजट फ्रेंडली</p>
+                </div>
+                <div class="quick-link-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>फेस्टिवल सेल</h3>
+                    <p>स्पेशल ऑफर</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>हमारे बारे में</h2>
+                    <p>StyleHub में हम 10+ साल से प्रीमियम क्वालिटी के कपड़े प्रदान कर रहे हैं। हमारा मिशन है हर ग्राहक को बेहतरीन फैशन और किफायती दामों में स्टाइलिश कपड़े उपलब्ध कराना।</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>प्रीमियम क्वालिटी</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>10+ साल का अनुभव</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>किफायती दाम</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">हमारी कहानी पढ़ें</button>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=400&fit=crop" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">ग्राहक समीक्षा</h2>
+            <div class="reviews-carousel">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Customer">
+                        <div class="reviewer-details">
+                            <h4>राहुल शर्मा</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"बेहतरीन क्वालिटी! मैंने यहाँ से कई बार शॉपिंग की है और हमेशा संतुष्ट रहा हूँ। डिलीवरी भी समय पर मिलती है।"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=80&h=80&fit=crop&crop=face" alt="Customer">
+                        <div class="reviewer-details">
+                            <h4>प्रिया गुप्ता</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"StyleHub से शॉपिंग करना एक अच्छा अनुभव रहा। कपड़ों की क्वालिटी उम्मीद से भी बेहतर थी। जरूर फिर से ऑर्डर करूंगी।"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Customer">
+                        <div class="reviewer-details">
+                            <h4>अमित कुमार</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"किफायती दामों में अच्छी क्वालिटी के कपड़े मिलते हैं। कस्टमर सर्विस भी बहुत अच्छी है। धन्यवाद StyleHub!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>न्यूजलेटर सब्सक्राइब करें</h2>
+                <p>पहला ऑर्डर पर 10% छूट पाएं और लेटेस्ट ऑफर्स की जानकारी सबसे पहले पाएं</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="अपना ईमेल एड्रेस डालें" required>
+                    <button type="submit">सब्सक्राइब करें</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section class="instagram-section">
+        <div class="container">
+            <h2 class="section-title">इंस्टाग्राम पर फॉलो करें</h2>
+            <div class="instagram-grid">
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=200&fit=crop" alt="Instagram Post">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tshirt"></i> StyleHub</h3>
+                    <p>प्रीमियम क्वालिटी के कपड़ों की आपकी पसंदीदा दुकान। 10+ साल का अनुभव और हजारों खुश ग्राहक।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>क्विक लिंक्स</h4>
+                    <ul>
+                        <li><a href="#home">होम</a></li>
+                        <li><a href="#men">मेन्स कलेक्शन</a></li>
+                        <li><a href="#women">वीमेन्स कलेक्शन</a></li>
+                        <li><a href="#kids">किड्स कलेक्शन</a></li>
+                        <li><a href="#sale">सेल</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ग्राहक सेवा</h4>
+                    <ul>
+                        <li><a href="#">संपर्क करें</a></li>
+                        <li><a href="#">शिपिंग जानकारी</a></li>
+                        <li><a href="#">रिटर्न पॉलिसी</a></li>
+                        <li><a href="#">साइज गाइड</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>संपर्क जानकारी</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 फैशन स्ट्रीट, नई दिल्ली</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+                        <p><i class="fas fa-clock"></i> सोम-शनि: 10AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. सभी अधिकार सुरक्षित।</p>
+                <div class="payment-methods">
+                    <span>हम स्वीकार करते हैं:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
