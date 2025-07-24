@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रोडक्ट्स - StyleHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> +91 98765 43210</span>
+                    <span><i class="fas fa-envelope"></i> info@stylehub.com</span>
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2><a href="index.html" style="color: inherit; text-decoration: none;"><i class="fas fa-tshirt"></i> StyleHub</a></h2>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">होम</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link active">कैटेगरी <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#men">मेन्स</a>
+                                <a href="#women">वीमेन्स</a>
+                                <a href="#kids">किड्स</a>
+                                <a href="#accessories">एक्सेसरीज</a>
+                            </div>
+                        </li>
+                        <li><a href="#about" class="nav-link">हमारे बारे में</a></li>
+                        <li><a href="contact.html" class="nav-link">संपर्क</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="खोजें...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>सभी प्रोडक्ट्स</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">होम</a>
+                    <span>/</span>
+                    <span>प्रोडक्ट्स</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <!-- Filters and Sort -->
+            <div class="products-controls">
+                <div class="filters-section">
+                    <h3><i class="fas fa-filter"></i> फिल्टर</h3>
+                    
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>कैटेगरी</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" value="all" checked>
+                                <span>सभी</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="mens">
+                                <span>मेन्स (24)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="womens">
+                                <span>वीमेन्स (18)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="kids">
+                                <span>किड्स (12)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <h4>प्राइस रेंज</h4>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" id="minPrice" placeholder="मिन" value="0">
+                                <span>-</span>
+                                <input type="number" id="maxPrice" placeholder="मैक्स" value="5000">
+                            </div>
+                            <div class="price-slider">
+                                <input type="range" id="priceRange" min="0" max="5000" value="2500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Size Filter -->
+                    <div class="filter-group">
+                        <h4>साइज़</h4>
+                        <div class="size-options">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn">S</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div class="filter-group">
+                        <h4>रंग</h4>
+                        <div class="color-options">
+                            <div class="color-option" data-color="black" style="background: #000"></div>
+                            <div class="color-option" data-color="white" style="background: #fff; border: 1px solid #ddd"></div>
+                            <div class="color-option" data-color="red" style="background: #e74c3c"></div>
+                            <div class="color-option" data-color="blue" style="background: #3498db"></div>
+                            <div class="color-option" data-color="green" style="background: #27ae60"></div>
+                            <div class="color-option" data-color="yellow" style="background: #f1c40f"></div>
+                        </div>
+                    </div>
+
+                    <button class="clear-filters-btn">
+                        <i class="fas fa-times"></i>
+                        सभी फिल्टर हटाएं
+                    </button>
+                </div>
+
+                <div class="products-main">
+                    <!-- Sort and View Options -->
+                    <div class="products-header">
+                        <div class="results-info">
+                            <span class="results-count">54 प्रोडक्ट्स मिले</span>
+                        </div>
+                        
+                        <div class="products-actions">
+                            <div class="sort-options">
+                                <label for="sortBy">सॉर्ट करें:</label>
+                                <select id="sortBy">
+                                    <option value="featured">फीचर्ड</option>
+                                    <option value="price-low">प्राइस: कम से ज्यादा</option>
+                                    <option value="price-high">प्राइस: ज्यादा से कम</option>
+                                    <option value="newest">नया पहले</option>
+                                    <option value="rating">रेटिंग</option>
+                                </select>
+                            </div>
+                            
+                            <div class="view-options">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product items will be dynamically generated -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn prev-page" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn">10</button>
+                        <button class="page-btn next-page">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tshirt"></i> StyleHub</h3>
+                    <p>प्रीमियम क्वालिटी के कपड़ों की आपकी पसंदीदा दुकान। 10+ साल का अनुभव और हजारों खुश ग्राहक।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>क्विक लिंक्स</h4>
+                    <ul>
+                        <li><a href="index.html">होम</a></li>
+                        <li><a href="products.html">सभी प्रोडक्ट्स</a></li>
+                        <li><a href="#women">वीमेन्स कलेक्शन</a></li>
+                        <li><a href="#kids">किड्स कलेक्शन</a></li>
+                        <li><a href="#sale">सेल</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ग्राहक सेवा</h4>
+                    <ul>
+                        <li><a href="contact.html">संपर्क करें</a></li>
+                        <li><a href="#">शिपिंग जानकारी</a></li>
+                        <li><a href="#">रिटर्न पॉलिसी</a></li>
+                        <li><a href="#">साइज गाइड</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>संपर्क जानकारी</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 फैशन स्ट्रीट, नई दिल्ली</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+                        <p><i class="fas fa-clock"></i> सोम-शनि: 10AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. सभी अधिकार सुरक्षित।</p>
+                <div class="payment-methods">
+                    <span>हम स्वीकार करते हैं:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

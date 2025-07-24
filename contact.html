@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संपर्क करें - StyleHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> +91 98765 43210</span>
+                    <span><i class="fas fa-envelope"></i> info@stylehub.com</span>
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2><a href="index.html"><i class="fas fa-tshirt"></i> StyleHub</a></h2>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">होम</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">कैटेगरी <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#men">मेन्स</a>
+                                <a href="#women">वीमेन्स</a>
+                                <a href="#kids">किड्स</a>
+                                <a href="#accessories">एक्सेसरीज</a>
+                            </div>
+                        </li>
+                        <li><a href="#about" class="nav-link">हमारे बारे में</a></li>
+                        <li><a href="contact.html" class="nav-link active">संपर्क</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="खोजें...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>संपर्क करें</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">होम</a>
+                    <span>/</span>
+                    <span>संपर्क</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-intro">
+                <h2>हमसे जुड़ें</h2>
+                <p>हमें आपसे सुनने में खुशी होगी। किसी भी प्रश्न या सहायता के लिए हमसे संपर्क करें।</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h3>संदेश भेजें</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">पहला नाम *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">अंतिम नाम *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">ईमेल *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">फोन नंबर</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">विषय *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">विषय चुनें</option>
+                                <option value="product">प्रोडक्ट के बारे में</option>
+                                <option value="order">ऑर्डर की समस्या</option>
+                                <option value="return">रिटर्न/एक्सचेंज</option>
+                                <option value="complaint">शिकायत</option>
+                                <option value="suggestion">सुझाव</option>
+                                <option value="other">अन्य</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">संदेश *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="अपना संदेश यहाँ लिखें..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                मुझे न्यूजलेटर और ऑफर्स की जानकारी भेजें
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            संदेश भेजें
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <h3>संपर्क जानकारी</h3>
+                    
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>पता</h4>
+                                <p>123 फैशन स्ट्रीट<br>कनॉट प्लेस, नई दिल्ली<br>110001, भारत</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>फोन</h4>
+                                <p>+91 98765 43210<br>+91 11-2345-6789</p>
+                                <small>सोम-शनि: 10AM-8PM</small>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>ईमेल</h4>
+                                <p>info@stylehub.com<br>support@stylehub.com</p>
+                                <small>24 घंटे में जवाब</small>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>WhatsApp</h4>
+                                <p>+91 98765 43210</p>
+                                <small>तुरंत सहायता के लिए</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store Hours -->
+                    <div class="store-hours">
+                        <h4><i class="fas fa-clock"></i> स्टोर का समय</h4>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>सोमवार - शुक्रवार</span>
+                                <span>10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>शनिवार</span>
+                                <span>10:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>रविवार</span>
+                                <span>11:00 AM - 7:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-section">
+                        <h4>सोशल मीडिया पर फॉलो करें</h4>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h3>हमारा स्थान</h3>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Google Maps</h4>
+                    <p>123 फैशन स्ट्रीट, कनॉट प्लेस, नई दिल्ली</p>
+                    <button class="directions-btn">
+                        <i class="fas fa-directions"></i>
+                        दिशा निर्देश पाएं
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h3>अक्सर पूछे जाने वाले प्रश्न</h3>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>क्या मैं ऑनलाइन ऑर्डर कर सकता हूँ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>जी हाँ, आप हमारी वेबसाइट से 24/7 ऑनलाइन ऑर्डर कर सकते हैं। हम पूरे भारत में डिलीवरी करते हैं।</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>रिटर्न पॉलिसी क्या है?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>आप खरीदारी के 30 दिन के अंदर कोई भी प्रोडक्ट रिटर्न कर सकते हैं। प्रोडक्ट की original condition होनी चाहिए।</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>डिलीवरी में कितना समय लगता है?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>सामान्यतः 3-5 कार्य दिवस में डिलीवरी हो जाती है। Express delivery भी उपलब्ध है।</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>क्या COD (Cash on Delivery) उपलब्ध है?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>जी हाँ, हम COD की सुविधा प्रदान करते हैं। ₹500+ के ऑर्डर पर कोई अतिरिक्त चार्ज नहीं।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tshirt"></i> StyleHub</h3>
+                    <p>प्रीमियम क्वालिटी के कपड़ों की आपकी पसंदीदा दुकान। 10+ साल का अनुभव और हजारों खुश ग्राहक।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>क्विक लिंक्स</h4>
+                    <ul>
+                        <li><a href="index.html">होम</a></li>
+                        <li><a href="#men">मेन्स कलेक्शन</a></li>
+                        <li><a href="#women">वीमेन्स कलेक्शन</a></li>
+                        <li><a href="#kids">किड्स कलेक्शन</a></li>
+                        <li><a href="#sale">सेल</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ग्राहक सेवा</h4>
+                    <ul>
+                        <li><a href="contact.html">संपर्क करें</a></li>
+                        <li><a href="#">शिपिंग जानकारी</a></li>
+                        <li><a href="#">रिटर्न पॉलिसी</a></li>
+                        <li><a href="#">साइज गाइड</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>संपर्क जानकारी</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 फैशन स्ट्रीट, नई दिल्ली</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+                        <p><i class="fas fa-clock"></i> सोम-शनि: 10AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. सभी अधिकार सुरक्षित।</p>
+                <div class="payment-methods">
+                    <span>हम स्वीकार करते हैं:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
