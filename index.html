@@ -5,86 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator - उम्र कैलकुलेटर</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="सटीक उम्र कैलकुलेटर - अपनी उम्र जानें साल, महीने, दिन में">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="cake-loader">
+                <i class="fas fa-birthday-cake"></i>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <div class="container">
+        <!-- Animated Background -->
         <div class="background-animation">
-            <div class="circle circle1"></div>
-            <div class="circle circle2"></div>
-            <div class="circle circle3"></div>
-            <div class="circle circle4"></div>
+            <div class="floating-shapes">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+                <div class="shape shape4"></div>
+                <div class="shape shape5"></div>
+                <div class="shape shape6"></div>
+            </div>
+            <div class="gradient-orbs">
+                <div class="orb orb1"></div>
+                <div class="orb orb2"></div>
+                <div class="orb orb3"></div>
+            </div>
         </div>
         
+        <!-- Main Calculator Card -->
         <div class="calculator-card">
+            <!-- Header Section -->
             <div class="header">
-                <i class="fas fa-birthday-cake cake-icon"></i>
+                <div class="icon-container">
+                    <i class="fas fa-birthday-cake cake-icon"></i>
+                    <div class="icon-glow"></div>
+                </div>
                 <h1>उम्र कैलकुलेटर</h1>
-                <p>अपनी सटीक उम्र जानें</p>
+                <p>अपनी सटीक उम्र जानें और मजेदार तथ्य देखें</p>
+                <div class="header-decoration">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
             
+            <!-- Input Section -->
             <div class="input-section">
-                <div class="input-group">
-                    <label for="birthdate">
-                        <i class="fas fa-calendar-alt"></i>
-                        जन्म तिथि चुनें
-                    </label>
-                    <input type="date" id="birthdate" class="date-input">
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="birthdate" class="input-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>जन्म तिथि चुनें</span>
+                        </label>
+                        <div class="date-input-wrapper">
+                            <input type="date" id="birthdate" class="date-input" placeholder="dd/mm/yyyy">
+                            <div class="input-focus-border"></div>
+                        </div>
+                        <div class="input-helper">
+                            <small><i class="fas fa-info-circle"></i> कृपया अपनी सही जन्म तिथि डालें</small>
+                        </div>
+                    </div>
+                    
+                    <button class="calculate-btn" onclick="calculateAge()">
+                        <span class="btn-content">
+                            <i class="fas fa-calculator"></i>
+                            <span class="btn-text">उम्र कैलकुलेट करें</span>
+                        </span>
+                        <div class="btn-ripple"></div>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection">
+                <!-- Age Display Cards -->
+                <div class="age-cards">
+                    <div class="age-card years-card">
+                        <div class="age-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="age-content">
+                            <div class="age-number" id="years">0</div>
+                            <div class="age-label">साल</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="age-card months-card">
+                        <div class="age-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="age-content">
+                            <div class="age-number" id="months">0</div>
+                            <div class="age-label">महीने</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="age-card days-card">
+                        <div class="age-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="age-content">
+                            <div class="age-number" id="days">0</div>
+                            <div class="age-label">दिन</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
                 </div>
                 
-                <button class="calculate-btn" onclick="calculateAge()">
-                    <i class="fas fa-calculator"></i>
-                    उम्र कैलकुलेट करें
+                <!-- Detailed Information -->
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>विस्तृत जानकारी</h3>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-sun"></i></div>
+                                <div class="info-details">
+                                    <span class="info-label">कुल दिन</span>
+                                    <span class="info-value" id="totalDays">0</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                                <div class="info-details">
+                                    <span class="info-label">कुल घंटे</span>
+                                    <span class="info-value" id="totalHours">0</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-stopwatch"></i></div>
+                                <div class="info-details">
+                                    <span class="info-label">कुल मिनट</span>
+                                    <span class="info-value" id="totalMinutes">0</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-gift"></i></div>
+                                <div class="info-details">
+                                    <span class="info-label">अगला जन्मदिन</span>
+                                    <span class="info-value" id="nextBirthday">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fun Facts Section -->
+                <div class="fun-facts-card">
+                    <div class="facts-header">
+                        <i class="fas fa-star"></i>
+                        <h3>मजेदार तथ्य</h3>
+                    </div>
+                    <div class="facts-grid">
+                        <div class="fact-item" id="zodiacSign">
+                            <div class="fact-icon"><i class="fas fa-star-of-life"></i></div>
+                            <div class="fact-content"></div>
+                        </div>
+                        <div class="fact-item" id="dayOfWeek">
+                            <div class="fact-icon"><i class="fas fa-calendar-day"></i></div>
+                            <div class="fact-content"></div>
+                        </div>
+                        <div class="fact-item" id="ageInSeconds">
+                            <div class="fact-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="fact-content"></div>
+                        </div>
+                        <div class="fact-item" id="heartbeats">
+                            <div class="fact-icon"><i class="fas fa-heartbeat"></i></div>
+                            <div class="fact-content"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Share Section -->
+                <div class="share-section">
+                    <button class="share-btn" onclick="shareAge()">
+                        <i class="fas fa-share-alt"></i>
+                        <span>अपनी उम्र शेयर करें</span>
+                    </button>
+                    <button class="reset-btn" onclick="resetCalculator()">
+                        <i class="fas fa-redo"></i>
+                        <span>फिर से कैलकुलेट करें</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <p>Made with <i class="fas fa-heart heartbeat"></i> for you</p>
+                <div class="footer-links">
+                    <span class="footer-link" onclick="showAbout()">
+                        <i class="fas fa-info-circle"></i> About
+                    </span>
+                    <span class="footer-link" onclick="showHelp()">
+                        <i class="fas fa-question-circle"></i> Help
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <!-- Modal for About/Help -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">About</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="result-section" id="resultSection">
-                <div class="age-display">
-                    <div class="age-item">
-                        <div class="age-number" id="years">0</div>
-                        <div class="age-label">साल</div>
-                    </div>
-                    <div class="age-item">
-                        <div class="age-number" id="months">0</div>
-                        <div class="age-label">महीने</div>
-                    </div>
-                    <div class="age-item">
-                        <div class="age-number" id="days">0</div>
-                        <div class="age-label">दिन</div>
-                    </div>
-                </div>
-                
-                <div class="detailed-info">
-                    <div class="info-row">
-                        <span class="info-label">कुल दिन:</span>
-                        <span class="info-value" id="totalDays">0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">कुल घंटे:</span>
-                        <span class="info-value" id="totalHours">0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">कुल मिनट:</span>
-                        <span class="info-value" id="totalMinutes">0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">अगला जन्मदिन:</span>
-                        <span class="info-value" id="nextBirthday">-</span>
-                    </div>
-                </div>
-                
-                <div class="fun-facts">
-                    <h3><i class="fas fa-star"></i> मजेदार तथ्य</h3>
-                    <div class="fact-item" id="zodiacSign"></div>
-                    <div class="fact-item" id="dayOfWeek"></div>
-                    <div class="fact-item" id="ageInSeconds"></div>
-                </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be added dynamically -->
             </div>
-        </div>
-        
-        <div class="footer">
-            <p>Made with <i class="fas fa-heart"></i> by Age Calculator</p>
         </div>
     </div>
     
