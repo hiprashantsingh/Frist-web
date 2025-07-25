@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prashant's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - उम्र कैलकुलेटर</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- 👋 Home Section -->
-  <section id="home">
-    <h1>Hi, I'm Prashant</h1>
-    <p>Web Developer | Learner | Creator</p>
-  </section>
-
-  <!-- 👨‍💼 About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I love building websites and learning new things every day.</p>
-  </section>
-
-  <!-- 💻 Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
-
-  <!-- 📩 Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- 📄 Footer -->
-  <footer>
-    <p>© 2025 Prashant Singh | All rights reserved</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <div class="container">
+        <div class="background-animation">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+        
+        <div class="calculator-card">
+            <div class="header">
+                <i class="fas fa-birthday-cake cake-icon"></i>
+                <h1>उम्र कैलकुलेटर</h1>
+                <p>अपनी सटीक उम्र जानें</p>
+            </div>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="birthdate">
+                        <i class="fas fa-calendar-alt"></i>
+                        जन्म तिथि चुनें
+                    </label>
+                    <input type="date" id="birthdate" class="date-input">
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateAge()">
+                    <i class="fas fa-calculator"></i>
+                    उम्र कैलकुलेट करें
+                </button>
+            </div>
+            
+            <div class="result-section" id="resultSection">
+                <div class="age-display">
+                    <div class="age-item">
+                        <div class="age-number" id="years">0</div>
+                        <div class="age-label">साल</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-number" id="months">0</div>
+                        <div class="age-label">महीने</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-number" id="days">0</div>
+                        <div class="age-label">दिन</div>
+                    </div>
+                </div>
+                
+                <div class="detailed-info">
+                    <div class="info-row">
+                        <span class="info-label">कुल दिन:</span>
+                        <span class="info-value" id="totalDays">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">कुल घंटे:</span>
+                        <span class="info-value" id="totalHours">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">कुल मिनट:</span>
+                        <span class="info-value" id="totalMinutes">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">अगला जन्मदिन:</span>
+                        <span class="info-value" id="nextBirthday">-</span>
+                    </div>
+                </div>
+                
+                <div class="fun-facts">
+                    <h3><i class="fas fa-star"></i> मजेदार तथ्य</h3>
+                    <div class="fact-item" id="zodiacSign"></div>
+                    <div class="fact-item" id="dayOfWeek"></div>
+                    <div class="fact-item" id="ageInSeconds"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Made with <i class="fas fa-heart"></i> by Age Calculator</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
